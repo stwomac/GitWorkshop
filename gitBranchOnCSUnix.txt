@@ -1,0 +1,27 @@
+Edit the hidden file called .bashrc in your user directory. 
+(Try not to edit/change too much in here. You can break your access to csunix and may need a ticket with IT to fix it.)
+
+In .bashrc (the . at the start of the name makes the file invisible/hidden) you should see a line similar to:
+
+PS1='\u@\h \w> '
+
+This PS1 variable is what describes your command prompt on the csunix box. You can actually change this!
+
+If you type a # in front of this line so it appears like so:
+
+#PS1='\u@\h \w> '
+
+It will comment out that line so it no longer works. Then put
+
+PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput bold)\][\w]\[$(tput sgr0)\]\[\033[38;5;14m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]>\[$(tput sgr0)\]"
+
+On the line below that line. 
+
+You'll now have a slightly more colorful command prompt that also will show what git branch you are on if you're in a directory that is a git repository!
+
+Generated with https://bashrcgenerator.com/
+
+See the links on the bottom of that page for more advanced ideas. 
+Especially 
+https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors or
+https://blog.grahampoulter.com/2011/09/show-current-git-bazaar-or-mercurial.html
