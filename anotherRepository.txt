@@ -1,0 +1,15 @@
+If you want to see another example of a repository, check out
+
+https://github.com/JEnduriumK/unofficial-angelo-edu-helpers
+
+which contains a couple Shell (Linux) scripts developed for 
+personal use by Joel King in a couple classes at ASU. 
+
+One script (irvine_test.sh) is designed to enable file input
+piping for programs compiled from Assembly on the csunix box.
+(Dr. Lopa may actually end up using this script in the near
+future.)
+
+The other script (compilerFastCheck.sh) is designed to help
+do the heavy lifting in checking compiler output in CS4301
+(the Algorithmic Languages and Compilers course).
